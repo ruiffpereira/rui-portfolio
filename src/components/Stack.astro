@@ -1,0 +1,25 @@
+---
+import { stack } from "../data/site";
+---
+
+<section class="section" id="stack" data-screen-label="Stack">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">03</span> / Stack</span>
+      <h2>Tools of the trade</h2>
+    </div>
+
+    <div class="stack-grid reveal">
+      {stack.map((col) => (
+        <div class="stack-col">
+          <h3>{col.title}</h3>
+          <ul>
+            {col.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import { about } from "../data/site";
+---
+
+<section class="section" id="about" data-screen-label="About">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">01</span> / About</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="about-lead" set:html={about.lead}></p>
+        <p class="about-body">{about.body}</p>
+      </div>
+
+      <div class="about-side reveal" data-d="1">
+        {about.facts.map((fact) => (
+          <div class="fact">
+            <div class="k">{fact.k}</div>
+            <div class="v" set:html={fact.v}></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

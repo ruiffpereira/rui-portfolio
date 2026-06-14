@@ -1,0 +1,54 @@
+---
+import { site } from "../data/site";
+---
+
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div class="hero-intro">
+      <span class="hero-status">
+        <span class="status-dot"></span>
+        Available for remote roles · Worldwide
+      </span>
+
+      <h1>
+        <span class="ln"><span>Rui</span></span>
+        <span class="ln"><span><em>Pereira</em></span></span>
+      </h1>
+
+      <div class="hero-sub">
+        <span class="status-dot quiet" title="Open to remote opportunities"></span>
+        <span>Building for the web since 2020</span>
+        <span class="dot">/</span>
+        <span>Local time <b id="clock">--:--</b> WET</span>
+      </div>
+
+      <p class="hero-lead">{site.tagline}</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact" data-tab="contact">
+          Get in touch
+          <span class="arr">↗</span>
+        </a>
+        <a class="btn btn-ghost" href={site.cv} download>
+          Download CV
+          <span class="arr">↓</span>
+        </a>
+      </div>
+    </div>
+
+    <aside class="hero-portrait">
+      <div class="portrait-frame">
+        <span class="portrait-corner" style="top:-1px;left:-1px;border-top-width:2px;border-left-width:2px;"></span>
+        <span class="portrait-corner" style="top:-1px;right:-1px;border-top-width:2px;border-right-width:2px;"></span>
+        <span class="portrait-corner" style="bottom:-1px;left:-1px;border-bottom-width:2px;border-left-width:2px;"></span>
+        <span class="portrait-corner" style="bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px;"></span>
+        <!-- Drop your photo at: public/portrait.jpg (portrait, ~4:5) -->
+        <img class="portrait-img" src="/portrait.jpg" alt={`${site.name} — ${site.role}`} loading="eager" />
+        <div class="portrait-meta">
+          <span class="tag">EST. 2020</span>
+          <span class="tag">Frontend · UX</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</header>

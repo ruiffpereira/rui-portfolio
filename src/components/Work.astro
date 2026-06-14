@@ -1,0 +1,42 @@
+---
+import { projects, site } from "../data/site";
+---
+
+<section class="section" id="work" data-screen-label="Work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">04</span> / Selected work</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="proj-list">
+      {projects.map((project) => (
+        <a class="proj reveal" href={project.href} target="_blank" rel="noopener">
+          <span class="proj-num">{project.num}</span>
+          <div class="proj-main">
+            <span class="proj-title">
+              {project.title}
+              {project.live && <span class="live">Live</span>}
+            </span>
+            <p class="proj-desc">{project.description}</p>
+            <div class="proj-tags">
+              {project.tags.map((tag) => (
+                <span class="tag-chip">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <span class="proj-arrow" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M4 14L14 4M14 4H6M14 4V12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <p class="proj-foot reveal">
+      <span>Want the full picture?</span>
+      <a href={site.github} target="_blank" rel="noopener">github.com/{site.githubHandle} ↗</a>
+    </p>
+  </div>
+</section>

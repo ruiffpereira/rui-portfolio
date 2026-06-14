@@ -1,0 +1,46 @@
+---
+import { site } from "../data/site";
+---
+
+<section class="section contact" id="contact" data-screen-label="Contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">05</span> / Contact</span>
+    </div>
+
+    <h2 class="contact-cta reveal">
+      <a href={`mailto:${site.email}`}>Let's build<br />something <span class="arr">↗</span></a>
+    </h2>
+
+    <p class="contact-note reveal">
+      Currently at Celfocus, quietly open to the right remote opportunity.
+    </p>
+
+    <div class="contact-grid reveal" data-d="1">
+      <div class="contact-item">
+        <div class="k">Email</div>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">Phone</div>
+        <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">Location</div>
+        <div class="v">{site.location} · Remote</div>
+      </div>
+      <div class="contact-item">
+        <div class="k">GitHub</div>
+        <a href={site.github} target="_blank" rel="noopener">/{site.githubHandle}</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">LinkedIn</div>
+        <a href={site.linkedin} target="_blank" rel="noopener">/{site.linkedinHandle}</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">Résumé</div>
+        <a href={site.cv} download>Download CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>

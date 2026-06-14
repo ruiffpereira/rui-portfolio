@@ -1,0 +1,38 @@
+---
+import { experience } from "../data/site";
+---
+
+<section class="section" id="experience" data-screen-label="Experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="idx">02</span> / Experience</span>
+      <h2>Where I've worked</h2>
+    </div>
+
+    <div class="exp-list">
+      {experience.map((job) => (
+        <article class="exp reveal">
+          <div class="exp-when">
+            {job.now ? (
+              <span class="now"><span class="status-dot"></span>{job.when}</span>
+            ) : (
+              job.when
+            )}
+          </div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3 class="exp-role">{job.role}</h3>
+              <span class="exp-co"><b>{job.company}</b> · {job.context}</span>
+            </div>
+            <p>{job.description}</p>
+            <div class="tags">
+              {job.tags.map((tag) => (
+                <span class="tag-chip">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

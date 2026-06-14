@@ -1,0 +1,15 @@
+---
+import { marquee } from "../data/site";
+// duplicate the list so the scroll loop is seamless
+const items = [...marquee, ...marquee];
+---
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    {items.map((item) => (
+      <>
+        <span>{item}</span><span class="star">✦</span>
+      </>
+    ))}
+  </div>
+</div>

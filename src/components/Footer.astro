@@ -1,0 +1,9 @@
+---
+import { site } from "../data/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="wrap footer">
+  <span>© <span id="year">{year}</span> {site.name} — {site.role}</span>
+  <span>Designed &amp; built with care · Porto, PT</span>
+</footer>
